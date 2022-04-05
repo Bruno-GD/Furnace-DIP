@@ -7,6 +7,6 @@ public class GasHeater implements IHeater {
 
     @Override
     public void increaseTemperatureOf(IThermalPlace place) {
-        place.updateTemperature(place.getTemperature() + increasePerTick);
+        place.updateTemperature(increasePerTick);
     }
 }
