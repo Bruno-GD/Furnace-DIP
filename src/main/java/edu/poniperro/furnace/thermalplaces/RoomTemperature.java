@@ -3,7 +3,7 @@ package edu.poniperro.furnace.thermalplaces;
 public class RoomTemperature implements IThermalPlace {
     private Double temperature;
 
-    RoomTemperature(double temperature) {
+    public RoomTemperature(double temperature) {
         this.temperature = temperature;
     }
 
