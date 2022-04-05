@@ -1,7 +1,11 @@
 package edu.poniperro.furnace.thermalplaces;
 
 public class RoomTemperature implements IThermalPlace {
-    private Double temperature = 0d;
+    private Double temperature;
+
+    RoomTemperature(double temperature) {
+        this.temperature = temperature;
+    }
 
     @Override
     public double getTemperature() {
@@ -10,6 +14,11 @@ public class RoomTemperature implements IThermalPlace {
 
     @Override
     public void updateTemperature(double celsius) {
-        this.temperature = celsius;
+        this.temperature += celsius;
+    }
+
+    @Override
+    public void freeze() {
+        this.temperature -= 1;
     }
 }
