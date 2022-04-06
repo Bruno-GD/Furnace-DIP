@@ -17,6 +17,7 @@ public class Regulator implements IThermalRegulator {
         while (current < maxTemperature) {
             // update temperature
             heater.increaseTemperatureOf(place);
+            place.freeze();
             current = sensor.getCurrentTemperatureOf(place);
             // display temperature
             screen.display(RegulatorState.HEATING, current);
